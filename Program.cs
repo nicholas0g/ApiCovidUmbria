@@ -109,7 +109,9 @@ namespace ApicovidUmbria
         private static async Task EseguiOperazioneAsync(string consumerKey,string consumerSecret,string url, string jsonstring) //funzione per garantire il sincronismo
         {
             string token = await GeneraToken(consumerSecret,consumerKey);
+            Console.WriteLine(token);
             string risultato = await RisutaltoTest(token, url,jsonstring);
+            Console.WriteLine(risultato);
             Application.ExitThread();
 
 
